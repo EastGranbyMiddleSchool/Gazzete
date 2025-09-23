@@ -348,4 +348,130 @@ footer p {
   transition: width 0.6s ease; /* плавна анімація */
 }
 
-.article-image { min-width: 100%; text-align: center; }
+.article-image {
+  min-width: 100%;
+  text-align: center;
+}
+
+/* Модалка */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6); /* більш затемнений фон */
+  backdrop-filter: blur(3px); /* стильний blur */
+  animation: fadeIn 0.3s;
+}
+
+/* Велика модалка */
+.modal-large .modal-content {
+  background: linear-gradient(145deg, #ffffff, #f3f0f8);
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.35s;
+  border: 2px solid #9c22a5;
+}
+
+/* Закриття */
+.close {
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  color: #9c22a5;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.close:hover {
+  transform: rotate(90deg);
+  color: #6e0d84;
+}
+
+/* Заголовки */
+.modal-content h3 {
+  color: #9c22a5;
+  font-size: 24px;
+  max-width: 500px;
+  margin-bottom: 8px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  max-width: 500px;
+  color: #333;
+}
+
+/* Інпути та textarea */
+.modal-content input,
+.modal-content textarea {
+  width: 95%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border: 2px solid #9c22a5;
+  box-shadow: 0 0 8px rgba(156,34,165,0.2);
+  outline: none;
+}
+
+/* Кнопка */
+.modal-content .fun-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modal-content .fun-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 18px rgba(156,34,165,0.4);
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-30px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
+}
+
+#join-form button[type="submit"] {
+  background: linear-gradient(90deg, #9c22a5, #d14fd1);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(156,34,165,0.4);
+}
+
+#join-form button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(156,34,165,0.6);
+  background: linear-gradient(90deg, #d14fd1, #9c22a5);
+}
