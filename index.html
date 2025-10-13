@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EGMS Newspaper</title>
+    <title>EGMS Gazette</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
@@ -15,7 +15,7 @@
       <div class="top-bar">
         <div class="brand">
           <img src="https://i.postimg.cc/L4tYwzw3/image.png" alt="School Symbol" class="logo">
-          <h1>EGMS Newspaper</h1>
+          <h1>EGMS GAZZETE</h1>
         </div>
         <nav>
           <a href="index.html">Home</a>
@@ -31,6 +31,46 @@
         <p>Be Kind, Be Safe, Be Responsible</p>
       </div>
     </header>
+
+    <!-- Join the Team Section -->
+<!-- Modal -->
+<!-- Join the Team Section -->
+<section class="section-box" id="join-team">
+  <h2 class="section-title">Join the Team / Submit Your Idea</h2>
+  <p class="section-subtitle">Have an idea for the Gazette or want to join our team? Submit it below!</p>
+  <button class="fun-btn" id="open-join-btn">Submit Your Idea</button>
+</section>
+
+<!-- Modal -->
+<!-- Modal -->
+<div id="join-modal" class="modal modal-large">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Submit Your Idea</h3>
+    <p>We’d love to hear from you! Join our team or suggest an idea for the Gazette.</p>
+<form id="join-form">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="idea">Your Idea / Role</label>
+  <textarea id="idea" name="idea" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+<p id="form-message"></p>
+
+
+
+    <p id="form-message"></p>
+  </div>
+</div>
+
+
+
+
 <script>
 // Modal
 const openBtn = document.getElementById('open-join-btn');
@@ -172,46 +212,6 @@ document.getElementById('join-form').addEventListener('submit', async function(e
         </section>
     </main>
 
-        <!-- Join the Team Section -->
-<!-- Modal -->
-<!-- Join the Team Section -->
-<section class="section-box" id="join-team">
-  <h2 class="section-title">Join the Team / Submit Your Idea</h2>
-  <p class="section-subtitle">Have an idea for the Gazette or want to join our team? Submit it below!</p>
-  <button class="fun-btn" id="open-join-btn">Submit Your Idea</button>
-</section>
-
-<!-- Modal -->
-<!-- Modal -->
-<div id="join-modal" class="modal modal-large">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Submit Your Idea</h3>
-    <p>We’d love to hear from you! Join our team or suggest an idea for the Gazette.</p>
-<form id="join-form">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="idea">Your Idea / Role</label>
-  <textarea id="idea" name="idea" required></textarea>
-
-  <button type="submit">Submit</button>
-</form>
-<p id="form-message"></p>
-
-
-
-    <p id="form-message"></p>
-  </div>
-</div>
-
-
-
-
-
     <!-- Footer -->
 <footer>
   <div class="footer-left">
@@ -226,6 +226,3 @@ document.getElementById('join-form').addEventListener('submit', async function(e
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
