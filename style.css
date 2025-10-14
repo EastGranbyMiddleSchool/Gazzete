@@ -475,3 +475,38 @@ footer p {
   box-shadow: 0 6px 20px rgba(156,34,165,0.6);
   background: linear-gradient(90deg, #d14fd1, #9c22a5);
 }
+
+/* === Стаття тижня === */
+.main-article {
+  line-height: 1.75;
+  font-size: 17px;
+  color: #333;
+  padding: 10px 5px 0;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-article p {
+  margin-bottom: 18px;
+}
+
+.main-article:first-letter {
+  font-size: 30px;
+  font-weight: bold;
+  color: #9c22a5;
+  float: left;
+  line-height: 1;
+  padding-right: 6px;
+}
+
+.article-footer {
+  text-align: right;
+  color: #9c22a5;
+  font-weight: 500;
+  margin-top: 25px;
+  font-style: italic;
+  border-top: 1px solid #e0d0e9;
+  padding-top: 8px;
+}
+
