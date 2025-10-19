@@ -94,11 +94,6 @@ section.visible {
   transform: translateY(0);
 }
 
-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
 /* === Заголовок статті (Article of the Week) === */
 .section-title {
   font-size: 34px; /* зробимо трохи більшим */
@@ -604,5 +599,6 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
 
