@@ -148,29 +148,33 @@ section.visible {
 }
 
 /* === Карусель новин === */
+/* Новини - обмежена висота */
 .news-slide {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: max-content;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .news-card {
-  min-width: 210mm; /* приблизний розмір А4 по ширині */
-  height: 297mm;    /* приблизний розмір А4 по висоті */
+  flex: 0 0 auto;
   margin-right: 20px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  background: #fff;
-  text-align: center;
+  max-height: 50%; /* половина від поточної висоти секції */
+  box-sizing: border-box;
 }
 
 .news-card img {
-  width: 100%;
-  height: calc(100% - 50px); /* залишаємо місце під заголовок */
-  object-fit: cover;
+  height: 250px; /* наприклад, половина від А4 висоти */
+  width: auto;
+  display: block;
+  object-fit: cover; /* щоб не спотворювати картинку */
+  border-radius: 8px;
 }
+
+/* Приховуємо стрілки */
+.news-carousel button {
+  display: none;
+}
+
 
 /* Карусель без кнопок */
 .news-carousel {
@@ -579,6 +583,7 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
 
 
