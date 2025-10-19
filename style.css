@@ -172,12 +172,14 @@ section.visible {
 }
 
 .news-card img {
-  height: 250px;
+  height: 400px; /* або інше бажане значення, більше ніж 250px */
   width: auto;
-  object-fit: cover;
+  display: block;
+  object-fit: cover; /* щоб картинка не спотворювалась */
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin: 0 auto; /* центрування */
 }
+
 
 .news-card h3 {
   text-align: center;
@@ -580,6 +582,7 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
 
 
