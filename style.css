@@ -153,33 +153,39 @@ section.visible {
   -webkit-overflow-scrolling: touch;
 }
 
+.news-carousel {
+  overflow: hidden; /* ховаємо все зайве */
+  position: relative;
+  width: 100%;
+}
+
 .news-slide {
   display: flex;
-  gap: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .news-card {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  height: 250px; /* обмежуємо висоту картки */
-  box-sizing: border-box;
+  flex: 0 0 100%; /* один слайд на всю ширину */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .news-card img {
-  height: 100%; /* заповнює висоту картки */
+  height: 250px;
   width: auto;
-  display: block;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-card h3 {
+  text-align: center;
+  font-size: 1.1rem;
 }
 
 /* Приховуємо стрілки */
 .news-carousel button {
-  display: none;
-}
-
-/* Приховати scrollbar */
-.news-carousel::-webkit-scrollbar {
   display: none;
 }
 
@@ -574,6 +580,7 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
 
 
