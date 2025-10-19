@@ -103,24 +103,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // === News Carousel Autoscroll ===
+  // === News Carousel Autoscroll (по одній картці, центрована) ===
   const slideContainer = document.querySelector('.news-slide');
-  if(slideContainer) {
-    let scrollAmount = 0;
-    const speed = 2; // швидкість прокрутки
+  const slides = document.querySelectorAll('.news-card');
+  if(slideContainer && slides.length > 0) {
+    let index = 0;
 
-    function autoScrollNews() {
-      scrollAmount += speed;
-      if(scrollAmount >= slideContainer.scrollWidth - slideContainer.clientWidth) {
-        scrollAmount = 0;
-      }
-      slideContainer.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
+    function showSlide(i) {
+      const slideWidth = slides[0].clientWidth;
+      slideContainer.style.transform = `translateX(${-i * slideWidth}px)`;
     }
 
-    setInterval(autoScrollNews, 50);
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 3500); // кожні 3.5 сек
+
+    // Початкове відображення
+    showSlide(index);
   }
 
 });
