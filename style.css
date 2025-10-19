@@ -179,7 +179,7 @@ section:hover {
 
 .news-card img {
   width: 100%;
-  height: 55vh;
+  height: 65vh;
   object-fit: cover;
 }
 
@@ -604,4 +604,5 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
