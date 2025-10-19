@@ -172,7 +172,7 @@ section.visible {
 }
 
 .news-card img {
-  height: 400px; /* або інше бажане значення, більше ніж 250px */
+  height: 470px; /* або інше бажане значення, більше ніж 250px */
   width: auto;
   display: block;
   object-fit: cover; /* щоб картинка не спотворювалась */
@@ -582,6 +582,7 @@ footer p {
   color: #333;
   line-height: 1.4;
 }
+
 
 
 
